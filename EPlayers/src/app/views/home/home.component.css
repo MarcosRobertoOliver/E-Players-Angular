@@ -1,0 +1,270 @@
+
+.container-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid salmon; */
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* cabeçalho */
+.header-flex {
+    /* flex conteiner */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    height: 85px;
+}
+
+header {
+    background-color: #1E1C21;
+}
+
+header .logo {
+    /* border: 1px solid red; */
+    width: 280px;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid white; */
+    width: 60%;
+    height: 100%;
+}
+
+header .menu a {
+    font-family: "Roboto-Light";
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+header .menu-bars {
+    display: none;
+}
+/* banner */
+
+.banner {
+    width: 100%;
+    /*  não precisaria!! */
+    height: 600px;
+    background-image: url(/assets/images/banner_pilotos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: blueviolet;
+}
+
+/* centraliza a informação do banner */
+.banner .banner-info-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+}
+
+.banner .banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 250px;
+    /* border: 1px solid white; */
+}
+
+.banner .banner-info .info-title {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner .banner-info .info-text {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+
+.banner .banner-info .info-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid #E71A3F;
+    background-color: #E71A3F;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 250px;
+    height: 45px;
+    margin: 0 auto;
+}
+
+/* patrocinadores */
+.patrocinados {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1E1C21;
+}
+
+.patrocinados-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #5c5858; */
+}
+
+/* SESSÃO PRODUTOS */
+.produtos {
+    background-color: #1E1C21;
+    padding: 30px 0;
+
+}
+
+.produtos h2 {
+    font-family: 'Roboto-Medium';
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.card {
+    max-width: 250px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to bottom, #000000, #1E1C21);
+}
+
+.card .card-title {
+    font-family: 'Roboto-Medium';
+    /* text-transform: uppercase; */
+}
+
+.card .card-price {
+    font-size: 1.4rem;
+    font-family: 'Roboto-Medium';
+}
+
+.card .btn-buy {
+    background-color: #C31616;
+    border: 1px solid #C31616;
+
+    width: 100%;
+    /* text-transform: uppercase; */
+}
+
+.card .card-title,
+.card .btn-buy {
+    text-transform: uppercase;
+}
+
+
+/* apagar */
+.bordas {
+    border: 3px solid green;
+}
+
+
+/* BREAKPOINTS */
+/* 
+    celulares 0 - 767px
+    tablets 768px - 991px
+    desktop >= 992px - 1199px
+    telas grandes >= 1200px - 1920px
+
+*/
+
+/* DESKTOP tablets 992px - 1199px */
+@media all and (max-width: 1199px) {
+
+    .container,
+    .container-grid {
+        max-width: 980px;
+    }
+}
+
+/* TABLETS tablets 768px - 991px*/
+@media all and (max-width: 991px) {
+    header .logo {
+        width: 230px;
+        margin-left: 15px;
+    }
+
+    
+    /* navbar */
+    header .menu {
+        position: fixed;
+        /* referência viewport */
+        top: 0px;
+        /* coordenadas de posicinoamento */
+        left: -80%;
+        z-index: 100; /* controle de camada */
+
+        opacity: 0; /* invisível  acima sera visivel*/
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        width: 80%;
+        height: 100%;
+
+        padding: 20px 50px;
+        background-color: rgba(195, 22, 22, 0.98);
+        border-radius: 0 0 0 80px;
+        transition: left 0.4s, opacity 0.9s;
+    }
+    .mostraEscondeMenu {
+        left: 0 !important;
+        opacity: 1 !important; /* visível */
+    }
+    header .menu a {
+        margin-bottom: 20px;
+        padding: 20px;
+        border-left: 3px dotted #AAB0AE;
+        font-size: 1.4rem;
+        color: #AAB0AE;
+    }
+
+    header .menu-bars {
+        display: block;
+        width: 45px;
+        margin-right: 15px;
+        color: white;
+    }
+    
+    
+
+    .patrocinados {
+        display: none;
+    }
+}
+
+
+/* SMARTPHONES celulares 0 - 767px */
+@media all and (max-width: 767px) {
+    
+    .header-flex {
+        height: 65px;
+    }
+    
+    header .menu-bars {
+        width: 25px;
+    }
+
+    header .logo {
+        width: 180px;
+    }
+
+    header .menu a {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-left: 1px dotted #AAB0AE;
+        font-size: 1rem;
+    }
+}

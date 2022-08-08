@@ -1,0 +1,33 @@
+/* imports de fonts */
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(/assets/fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(/assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(/assets/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+/* Reset de página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto-Regular';
+    color: white;
+    /* herança */
+}
