@@ -180,91 +180,19 @@ header .menu-bars {
 
 */
 
-/* DESKTOP tablets 992px - 1199px */
 @media all and (max-width: 1199px) {
 
-    .container,
-    .container-grid {
-        max-width: 980px;
-    }
+   
 }
 
-/* TABLETS tablets 768px - 991px*/
 @media all and (max-width: 991px) {
-    header .logo {
-        width: 230px;
-        margin-left: 15px;
-    }
-
-    
-    /* navbar */
-    header .menu {
-        position: fixed;
-        /* referência viewport */
-        top: 0px;
-        /* coordenadas de posicinoamento */
-        left: -80%;
-        z-index: 100; /* controle de camada */
-
-        opacity: 0; /* invisível  acima sera visivel*/
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-
-        width: 80%;
-        height: 100%;
-
-        padding: 20px 50px;
-        background-color: rgba(195, 22, 22, 0.98);
-        border-radius: 0 0 0 80px;
-        transition: left 0.4s, opacity 0.9s;
-    }
-    .mostraEscondeMenu {
-        left: 0 !important;
-        opacity: 1 !important; /* visível */
-    }
-    header .menu a {
-        margin-bottom: 20px;
-        padding: 20px;
-        border-left: 3px dotted #AAB0AE;
-        font-size: 1.4rem;
-        color: #AAB0AE;
-    }
-
-    header .menu-bars {
-        display: block;
-        width: 45px;
-        margin-right: 15px;
-        color: white;
-    }
-    
-    
 
     .patrocinados {
         display: none;
     }
+
 }
 
-
-/* SMARTPHONES celulares 0 - 767px */
 @media all and (max-width: 767px) {
-    
-    .header-flex {
-        height: 65px;
-    }
-    
-    header .menu-bars {
-        width: 25px;
-    }
 
-    header .logo {
-        width: 180px;
-    }
-
-    header .menu a {
-        margin-bottom: 10px;
-        padding: 10px;
-        border-left: 1px dotted #AAB0AE;
-        font-size: 1rem;
-    }
 }
