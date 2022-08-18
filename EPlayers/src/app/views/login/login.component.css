@@ -1,6 +1,5 @@
-
 body {
-    /* display-flex para centralizar o formulário */
+    /* flex para centralizar o formulário */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,29 +7,31 @@ body {
     height: 100vh;
     /* border: 10px solid green; */
 
-    
-    background-color: #3a404e;
-    color: white ;
+    background-color: #3A404E;
+    color: white;
     font-family: "Roboto-Regular";
-
 }
+
 
 /* mobile first */
 
 .container {
-
     width: 100%;
-    max-width: 320px;
+    max-width: 315px;
     margin: 0 auto;
     /* border: 1px solid red; */
+    
+    
 }
-.voltar {
-   margin-bottom: 60px; 
 
+.voltar {
+    margin-bottom: 60px
 }
+
 .titulo {
     margin-bottom: 100px;
 }
+
 .linha {
     display: flex;
     justify-content: space-between;
@@ -38,47 +39,45 @@ body {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ababab;
+
 }
 
-
-.linha:first-of-type {/* simplesmente muda a cor da borda/linha no primeiro elemento  */
+/* pinta a borda somente da primeira linha */
+.linha:first-of-type {
     border-bottom: 1px solid #a0824d;
 }
-
 
 .linha input {
     height: 40px;
     width: 90%;
-    color: #ababab ;
+    color: #ababab;
     background-color: transparent;
     border: none;
     outline: none;
-    
 }
 
 .linha input::placeholder {
-   color: #ababab;
+    color: #ababab;
 }
+
 .mensagem {
     text-align: center;
     color: #c67187;
     height: 25px;
-
 }
 
 .signin {
     display: block;
-    color: white;
     width: 80%;
     margin: 25px auto 0;
     background-color: black;
+    color: white;
     padding: 20px;
     border: 1px solid black;
     border-radius: 25px;
     font-size: 1.2rem;
     font-family: "Roboto-Regular";
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 50%);  
-
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Tablet */
@@ -92,7 +91,7 @@ body {
     
 }
 
-
+/* Tablet */
 @media screen and (min-width: 992px ) {
     .container {
         max-width: 900px;

@@ -1,0 +1,19 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "descricao": "Calça Jeans",
+      "preco": "259,00"
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "bestPassw0rd",
+      "id": 2
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "bestPassw0rd",
+      "id": 3
+    }
+  ]
+}
