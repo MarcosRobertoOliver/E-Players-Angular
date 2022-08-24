@@ -17,13 +17,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //nossas funcionalidades
   faUser= faUser
   faEnvelope= faEnvelope
   faLock= faLock
   faArrowLeft= faArrowLeft
 
-  userModel = new User()
+  userModel = new User() //modelo/model
   nomeAluno : any = ""
+  mensagem: string = ""
 
   mostrarNome(): any{
     this.nomeAluno = this.userModel.nome;
@@ -33,8 +35,18 @@ export class LoginComponent implements OnInit {
 //fazer validaçao
     // console.log(this.userModel);
 
-    this.userService.signin(this.userModel).subscribe(function(response){
-      console.log(response);
+    this.userService.signin(this.userModel).subscribe((response) => {
+      // console.log(response);
+      this.mensagem = `Logado com Sucesso! ${response.status} ${response.statusText}`
+
+    }, (e) =>{
+      // console.log('Deu Pau', e.error);
+      console.clear()
+      this.mensagem = `${e.error} ${e.status} ${e.statusText}`
     })
   }
 }
+
+// (params) => {
+
+// }

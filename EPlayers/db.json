@@ -1,3 +1,4 @@
+
 {
   "users": [
     {
@@ -6,5 +7,6 @@
       "password": "$2a$10$tu.m/pfNZUfSIlZCqQM1/eX1m8NdVsTbr7URAIRJWtFrFPFH8w6.6",
       "id": 1
     }
+    
   ]
 }
