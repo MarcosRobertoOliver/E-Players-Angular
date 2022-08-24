@@ -14,16 +14,17 @@ export class UserService {
     url = "http://localhost:3000/signin"
   //get
   //post
-  //put
-  signin(user: User ):Observable<any>{
+  
+  signin(user: User):Observable<any>{
     return this.httpClient.post(
-      this.url, 
-      JSON.stringify(user), 
-      {
-        headers: new HttpHeaders({"Content-Type": "Application/json"}),
+      this.url,                  //url
+      JSON.stringify (user),     //dody
+      {                          //options
+        headers: new HttpHeaders({"Content-Type": "application/json"}),
         observe: 'response'
       }
     )
   }
+  //put
   //delete
 }

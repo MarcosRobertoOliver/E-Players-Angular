@@ -1,19 +1,10 @@
 {
-  "user": [
+  "users": [
     {
-      "id": 1,
-      "descricao": "Calça Jeans",
-      "preco": "259,00"
-    },
-    {
-      "email": "olivier@mail.com",
-      "password": "bestPassw0rd",
-      "id": 2
-    },
-    {
-      "email": "olivier@mail.com",
-      "password": "bestPassw0rd",
-      "id": 3
+      "name": "Marcos Roberto",
+      "email": "mro@mro.com",
+      "password": "$2a$10$tu.m/pfNZUfSIlZCqQM1/eX1m8NdVsTbr7URAIRJWtFrFPFH8w6.6",
+      "id": 1
     }
   ]
 }

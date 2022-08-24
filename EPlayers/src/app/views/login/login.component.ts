@@ -11,21 +11,27 @@ import { UserService } from 'src/app/services/user.service';
 })
 
 export class LoginComponent implements OnInit {
+  
+
+  constructor(private userService: UserService) { }
+
+  ngOnInit(): void {
+  }
   faUser= faUser
   faEnvelope= faEnvelope
   faLock= faLock
   faArrowLeft= faArrowLeft
 
   userModel = new User()
+  nomeAluno : any = ""
 
-  constructor(private userService: UserService) { }
-
-  ngOnInit(): void {
+  mostrarNome(): any{
+    this.nomeAluno = this.userModel.nome;
   }
-
+//Funçao de Login
   signin(){
-
-    console.log(this.userModel);
+//fazer validaçao
+    // console.log(this.userModel);
 
     this.userService.signin(this.userModel).subscribe(function(response){
       console.log(response);
