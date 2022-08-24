@@ -1,0 +1,16 @@
+.app-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    background-color: salmon;
+
+}
+.app-text {
+    color: lightgray; 
+}
