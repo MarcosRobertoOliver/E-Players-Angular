@@ -27,26 +27,50 @@ export class LoginComponent implements OnInit {
   nomeAluno : any = ""
   mensagem: string = ""
 
-  mostrarNome(): any{
+  mostrarNome(): any {
     this.nomeAluno = this.userModel.nome;
   }
+  validaLogin(): boolean{
+
+    if ( this.userModel.nome === undefined ||this.userModel.nome === '' ||
+      this.userModel.email === undefined ||this.userModel.email === '' || 
+      this.userModel.password === undefined ||this.userModel.password === ''
+    ){
+      return false;
+  }   else{
+      return true;
+  }
+  
+}
 //Funçao de Login
-  signin(){
-//fazer validaçao
+signin(){
+  //fazer validaçao
+  if ( this.validaLogin()){
+
     // console.log(this.userModel);
 
-    this.userService.signin(this.userModel).subscribe((response) => {
-      // console.log(response);
-      this.mensagem = `Logado com Sucesso! ${response.status} ${response.statusText}`
+    this.userService.signin(this.userModel)
+    .subscribe(
+      {
+         next:(response) => {
+          console.log(response);
+          this.mensagem = `Logado com Sucesso! ${response.status} ${response.statusText}`
+        },
+        
+          error: (e) => {
+          console.log('Deu Pau', e);
+          // console.clear()
+          this.mensagem = `${e.error} ${e.status} ${e.statusText}`
+        }
+      }
+    )
+   
 
-    }, (e) =>{
-      // console.log('Deu Pau', e.error);
-      console.clear()
-      this.mensagem = `${e.error} ${e.status} ${e.statusText}`
-    })
+    } else{
+      
+      console.log(this.userModel);
+      this.mensagem = "Preencher Campos obrigatórios "
+    }
+
   }
 }
-
-// (params) => {
-
-// }

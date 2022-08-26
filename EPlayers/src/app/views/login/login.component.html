@@ -10,7 +10,7 @@
         
         <div class="linha">
             <fa-icon [icon]="faUser"></fa-icon>
-            <input type="text" id="nome" (keyup)="mostrarNome" placeholder="seu" name="nome" [(ngModel)]="userModel.nome">
+            <input type="text" id="nome" (keyup)="mostrarNome()" placeholder="seu" name="nome" [(ngModel)]="userModel.nome">
         </div>
         
         <div class="linha">
@@ -26,6 +26,7 @@
    
 
             <p class="mensagem">{{mensagem}}</p>
+            <p>Autocomplet:  {{nomeAluno}}</p>
             
         
             
